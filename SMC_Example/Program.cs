@@ -4,6 +4,6 @@
 SMC_Driver driver = new SMC_Driver(
     new RectangleAreaSimulator()); // The simulator describes what each experiment is going to be like
 
-double area = driver.RunSimulations(1000000);
+double estimated_area = driver.RunSimulations(1000000);
 
-Console.WriteLine(area);
+Console.WriteLine(estimated_area);
