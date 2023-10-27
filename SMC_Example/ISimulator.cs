@@ -8,6 +8,7 @@ namespace SMC_Example
 {
     public interface ISimulator
     {
+        // Produce y_i
         double Simulate();
     }
 }
