@@ -15,7 +15,10 @@ foreach (int simulations in simulation_Size)
     // We run the simulation "n" times
     // to obtain the value mu hat subscript n
     // This is an estimate (hat) of mu using exactly n simulations
-    double estimated_area = driver.RunSimulations(simulations);
+    driver.RunSimulations(simulations);
+
+    // MUST FIRST RUN THE SIMULATION TO USE IN THIS WAY!!!
+    double estimated_area = driver.GetEstimatedMeanFromSimulations();
 
     Console.WriteLine($"The result using {simulations} simulations is {estimated_area}.");
     Console.WriteLine($"The estimated value for Pi is {estimated_area * 4}");
